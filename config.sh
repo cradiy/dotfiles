@@ -5,9 +5,13 @@ sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-gtk fcitx5-qt fcitx5-config
 sudo dnf install neovim kitty fish fzf git cmake
 sudo dnf copr enable lihaohong/yazi
 sudo dnf install yazi zellij gitui bat
-sudo dnf install clang shfmt
+sudo dnf install clang shfmt hexyl
+curl https://install.duckdb.org | sh
 cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 sudo dnf remove ibus\*
+
+# Yazi install plugins
+ya pakc -i
 
 # Check if Node.js is installed
 if command -v node >/dev/null 2>&1; then

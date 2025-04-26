@@ -1,0 +1,89 @@
+[[manager.prepend_keymap]]
+on = "H"
+run = "plugin duckdb -1"
+desc = "Scroll one column to the left"
+
+[[manager.prepend_keymap]]
+on = "L"
+run = "plugin duckdb +1"
+desc = "Scroll one column to the right"
+
+[[manager.prepend_keymap]]
+on = ["g", "o"]
+run = "plugin duckdb -open"
+desc = "open with duckdb"
+
+[[manager.prepend_keymap]]
+on = ["g", "u"]
+run = "plugin duckdb -ui"
+desc = "open with duckdb ui"
+
+[[manager.prepend_keymap]]
+on = ["C"]
+run = "plugin ouch"
+desc = "Compress with ouch"
+
+[[manager.prepend_keymap]]
+on = "<A-y>"
+run = ["plugin copy-file-contents"]
+desc = "Copy contents of file"
+
+[[manager.prepend_keymap]]
+on = [ "c", "r" ]
+run = "plugin path-from-root"
+desc = "Copies path from git root"
+# keymap.toml
+[[manager.prepend_keymap]]
+on   = [ "g", "c" ]
+run  = "plugin vcs-files"
+desc = "Show Git file changes"
+
+[[manager.prepend_keymap]]
+on   = [ "l" ]
+run  = "plugin fast-enter"
+desc = "Enter the subfolder faster, or open the file directly"
+
+# [[manager.prepend_keymap]]
+# on   = [ ".", "s" ]
+# run  = "plugin what-size"
+# desc = "Calc size of selection or cwd" 
+
+[[manager.prepend_keymap]]
+on = [ "P", "s" ]
+run = "plugin projects save"
+desc = "Save current project"
+
+[[manager.prepend_keymap]]
+on = [ "P", "l" ]
+run = "plugin projects load"
+desc = "Load project"
+
+[[manager.prepend_keymap]]
+on = [ "P", "P" ]
+run = "plugin projects load_last"
+desc = "Load last project"
+
+[[manager.prepend_keymap]]
+on = [ "P", "d" ]
+run = "plugin projects delete"
+desc = "Delete project"
+
+[[manager.prepend_keymap]]
+on = [ "P", "D" ]
+run = "plugin projects delete_all"
+desc = "Delete all projects"
+
+[[manager.prepend_keymap]]
+on = [ "P", "m" ]
+run = "plugin projects 'merge current'"
+desc = "Merge current tab to other projects"
+
+[[manager.prepend_keymap]]
+on = [ "P", "M" ]
+run = "plugin projects 'merge all'"
+desc = "Merge current project to other projects"
+
+[[manager.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"

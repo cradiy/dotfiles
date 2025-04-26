@@ -6,7 +6,7 @@ sudo dnf install neovim kitty fish fzf git cmake
 sudo dnf copr enable lihaohong/yazi
 sudo dnf install yazi zellij gitui bat
 sudo dnf install clang shfmt
-cp /usr/share/applications/fcitx5-wayland-launcher.desktop ~/.config/autostart/
+cp /usr/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 sudo dnf remove ibus\*
 
 # Check if Node.js is installed

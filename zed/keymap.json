@@ -13,6 +13,8 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "editor::MoveUp",
+      "ctrl-w": "pane::CloseActiveItem",
+      "alt-w": "workspace::CloseInactiveTabsAndPanes",
       "ctrl-j": "editor::MoveDown"
     }
   },

@@ -31,7 +31,7 @@ return {
 					ft = "snacks_terminal",
 					size = { height = 0.4 },
 					title = "🦀 LazyTerm",
-					filter = function(_buf, win)
+					filter = function(_, win)
 						return vim.w[win].snacks_win
 							and vim.w[win].snacks_win.position == pos
 							and vim.w[win].snacks_win.relative == "editor"

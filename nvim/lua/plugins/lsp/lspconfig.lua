@@ -2,14 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = { "saghen/blink.cmp" },
 
-	-- example using `opts` for defining servers
-	-- opts = {
-	-- 	servers = {
-	-- 		lua_ls = {},
-	-- 	},
-	-- 	inlay_hints = { enabled = true },
-	-- },
-
 	opts = function()
 		---@class PluginLspOpts
 		local ret = {
@@ -138,55 +130,13 @@ return {
 						},
 					},
 				},
-				ts_ls = {
-					-- capabilities = require("cmp_nvim_lsp").default_capabilities(),
-					settings = {
-						typescript = {
-							inlayHints = {
-								includeInlayParameterNameHints = "all",
-								includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-								includeInlayFunctionParameterTypeHints = false,
-								includeInlayVariableTypeHints = true,
-								includeInlayVariableTypeHintsWhenTypeMatchesName = false,
-								includeInlayPropertyDeclarationTypeHints = true,
-								includeInlayFunctionLikeReturnTypeHints = false,
-								includeInlayEnumMemberValueHints = true,
-							},
-						},
-						javascript = {
-							inlayHints = {
-								includeInlayParameterNameHints = "all",
-								includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-								includeInlayFunctionParameterTypeHints = true,
-								includeInlayVariableTypeHints = true,
-								includeInlayVariableTypeHintsWhenTypeMatchesName = false,
-								includeInlayPropertyDeclarationTypeHints = true,
-								includeInlayFunctionLikeReturnTypeHints = true,
-								includeInlayEnumMemberValueHints = true,
-							},
-						},
-					},
-				},
-				cssls = {
-					on_attach = function(client)
-						vim.opt.tabstop = 2 -- number of visual spaces per TAB
-						vim.opt.softtabstop = 2 -- number of spacesin tab when editing
-						vim.opt.shiftwidth = 2 -- insert 4 spaces on a tab
-					end,
-				},
+				vtsls = {},
+				cssls = {},
 			},
 			-- you can do any additional lsp server setup here
 			-- return true if you don't want this server to be setup with lspconfig
 			---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
-			setup = {
-				-- example to setup with typescript.nvim
-				-- tsserver = function(_, opts)
-				--   require("typescript").setup({ server = opts })
-				--   return true
-				-- end,
-				-- Specify * to use this function as a fallback for any server
-				-- ["*"] = function(server, opts) end,
-			},
+			setup = {},
 		}
 		return ret
 	end,

@@ -10,7 +10,6 @@ return {
 	require("plugins.editor.git"),
 	require("plugins.editor.move"),
 	require("plugins.editor.search"),
-	require("plugins.editor.ai"),
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()

@@ -2,7 +2,7 @@ return {
 	require("plugins.lang.rust"),
 	require("plugins.lang.lua"),
 	{
-		"MysticalDevil/inlay-hints.nvim",
+		"cradiy/inlay-hints.nvim",
 		event = "LspAttach",
 		dependencies = { "neovim/nvim-lspconfig" },
 		config = function()

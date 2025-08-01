@@ -7,6 +7,7 @@ return {
 			-- python = { "isort", "black" },
 			-- You can customize some of the format options for the filetype (:help conform.format)
 			rust = { "rustfmt", lsp_format = "fallback" },
+			toml = { "taplo", "format", lsp_format = "fallback" },
 			sh = { "shfmt", "-w", "-i", "2", "-bn", "-ci", lsp_format = "fallback" },
 			-- Conform will run the first available formatter
 			javascript = { "prettierd", "prettier", lsp_format = "fallback" },
@@ -14,6 +15,11 @@ return {
 			typescript = { "prettierd", "prettier", lsp_format = "fallback" },
 			javascriptreact = { "prettierd", "prettier", lsp_format = "fallback" },
 			typescriptreact = { "prettierd", "prettier", lsp_format = "fallback" },
+		},
+		format_on_save = {
+			-- These options will be passed to conform.format()
+			timeout_ms = 500,
+			lsp_format = "fallback",
 		},
 	},
 	config = true,

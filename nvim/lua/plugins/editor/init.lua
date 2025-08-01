@@ -1,6 +1,6 @@
 return {
-	-- require("plugins.editor.neo-tree"),
 	require("plugins.editor.yazi"),
+	require("plugins.editor.ai"),
 	require("plugins.editor.comments"),
 	require("plugins.editor.treesitter"),
 	require("plugins.editor.fzf"),
